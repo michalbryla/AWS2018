@@ -8,7 +8,11 @@ This is a final project for the cloud computing course at Warsaw University of T
 -  Next step was to automate control of the first instance. Without it, every time the instance was used, it had to be manually started from AWS control panel and stopped after the work was done. Few Python scripts were written, which were used to start, stop, get public dns and to connect to instance with Putty
 ### 2. Installing Apache Spark
 - After learning basics, Apache Spark was installed. Amazon provides tools for automated setup of computing clusters, but they weren't used - Spark had been set up manually on the master instance, then the script was written to automate set up and configuration of slave instances.
-### 3. Using interactive console
+### 3. Deploying scripts on master instance
+  - After initial setup of Apache Spark, it's basic features were tested - interactive console and script deployment
+  - Interactive console allows to get hold of Python programming and to play with it - some basic programs were tested.
+  - At this point, one minor problem occured - I couldn't login into the instance I've created. Solution was simple - when instance was created I've chosen, that incoming traffic should be accepted only from one IP - mine, which isn't static by default in my ISP.
+  - Then, example script was locally deployed - kmeans.py. In order to do so, numpy needed to be installed and some example data had to be generated - it was generated using make_blobs function from scipy
 ### 4. Adding slave nodes
 TO BE DONE
 ### 5. Launching example application
