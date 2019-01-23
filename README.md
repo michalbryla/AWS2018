@@ -13,10 +13,14 @@ This is a final project for the cloud computing course at Warsaw University of T
   - Interactive console allows to get hold of Python programming and to play with it - some basic programs were tested.
   - At this point, one minor problem occured - I couldn't login into the instance I've created. Solution was simple - when instance was created I've chosen, that incoming traffic should be accepted only from one IP - mine, which isn't static by default in my ISP.
   - Then, example script was locally deployed - kmeans.py. In order to do so, numpy needed to be installed and some example data had to be generated - it was generated using make_blobs function from scipy
+  - I've had problems with kmeans.py script - despite many attempts, I didn't make it work. In order to test my cluster, I've modified pi.py script to return it's execution time along estimated pi value, I've also modified it to be longer.
+  - After few attempts to make the execution as long as possible, the physical limit has been found - the instance didn't have enough memory. The longest run made was 13.02 seconds. This may be not enough to show the advantage of using distributed computing (comunicating between nodes also takes some time).
 ### 4. Adding slave nodes
-TO BE DONE
+  -  First, new instances for slave noded had to be created. The script written in second step wasn't used - I've created image of first, master instance and launched another two instances using this image.
+  - 
 ### 5. Launching example application
-TO BE DONE
+  - Finally, the main task of this project was completed - pi.py had been run in parallel on two slave instances, then, the time of execution was compared: 13.02 seconds for local deploy and XXX for distributed computing.
+  
 ### 6. Useful Articles
 |  Link  |  Description  |
 | -----  | ------------- |
